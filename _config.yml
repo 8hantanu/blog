@@ -1,0 +1,13 @@
+title: Shantanu's blog
+author: Shantanu Mishra
+email: hey@8hantanu.net
+
+url: https://8hantanu.net
+baseurl: /blog
+
+remote_theme: yree/mold
+
+footer_content: >
+  ##### © 2024 [8hantanu](https://8hantanu.net). 📬 [comment](javascript:window.location='mailto:hey@8hantanu.net?subject='+encodeURIComponent(document.title)). ⬅️ [previous](..).
+
+favicon: favicon.svg
