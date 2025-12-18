@@ -1,0 +1,47 @@
+name: Update Blog README
+
+on:
+  schedule:
+    # Saturday 00:00 (UTC)
+    - cron: "0 0 * * 6"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout blog repo (this repo)
+        uses: actions/checkout@v4
+
+      - name: Checkout wiki repo
+        uses: actions/checkout@v4
+        with:
+          repository: 8hantanu/wiki
+          path: wiki
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Update README.md
+        run: python .github/scripts/update_blog_readme.py
+
+      - name: Commit & push if changed
+        run: |
+          if git diff --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add README.md
+          git commit -m "chore: update blog list"
+          git push
