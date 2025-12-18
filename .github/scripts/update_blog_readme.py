@@ -109,7 +109,7 @@ def collect_posts() -> list[Post]:
 
 
 def render_blog_section(posts: list[Post]) -> str:
-    lines: list[str] = ["# Blog", ""]
+    lines: list[str] = ["# Shantanu's blog ✒️", "", "**Collection of the latest and greatest pages from the wiki 📖**", ""]
 
     posts_by_year: dict[int, list[Post]] = defaultdict(list)
     for p in posts:
