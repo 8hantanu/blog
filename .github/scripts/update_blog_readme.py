@@ -100,7 +100,7 @@ def collect_posts() -> list[Post]:
 
 def render_blog_section(posts: list[Post]) -> str:
     lines: list[str] = [
-        "# Shantanu's blog",
+        "# shantanu's blog",
         "",
         "**Collection of the latest and greatest pages from the wiki**",
         "",
