@@ -1,4 +1,4 @@
-# Shantanu's blog
+# shantanu's blog
 
 **Collection of the latest and greatest pages from the wiki**
 
