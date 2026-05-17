@@ -4,6 +4,7 @@
 
 ## 2026
 - [zed and zen](https://8hantanu.net/wiki/work/setup/zed-and-zen)
+- [your project needs fuar docs!](https://8hantanu.net/wiki/work/setup/fuar)
 
 ## 2023
 - [work over self](https://8hantanu.net/wiki/self/lifestyle/work-over-self)
